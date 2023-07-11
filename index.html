@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+     
+        }
+        
+        .gameboard-legend {
+            display: flex;
+            align-items: center;
+        }
+        
+        .gameboard {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            /* Add margin-top to create a small gap */
+        }
+        
+        .legend {
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 10px 10px 0 #000000;
+            background-color: rgba(23, 107, 135, 0.20);
+            margin-right: auto;
+            margin-bottom: auto;
+            margin-top: 50px;
+            width: 250px;
+            text-align: justify;
+            
+        }
+        
+        .rules {
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 10px 10px 0 #000000;
+            background-color: rgba(23, 107, 135, 0.20);
+            margin-left: auto;
+            margin-bottom: auto;
+            margin-top: 50px;
+            word-wrap: break-word;
+            width: 250px;
+            text-align: justify;
+        }
+        
+        .legend-name {
+            font-weight: 600;
+            font-size: 23px;
+        }
+        .legend-item,
+        .rules p {
+            font-size: 18px;
+            /* Modify the font size as per your preference */
+        }
+        
+        .legend-name {
+            margin-bottom: 7px;
+        }
+        
+        .legend-item {
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="circle1">
+            
+        </div>
+        <h1 id="playerText">Tic Tac Toe</h1>
+
+        <div class="gameboard-legend">
+            <div class="legend">
+                <div style="border-radius: 5px; padding: 5px;">
+                    <legend class="legend-name">Legend:</legend>
+                    <hr class="line">
+                    <pre> </pre>
+                    <legend class="legend-item">Player 1 - X turn</legend>
+                    <legend class="legend-item">Player 2 - O turn</legend>
+                </div>
+            </div>
+
+            <div class="gameboard">
+                <div id="gameboard">
+                    <div class="box" id="0"></div>
+                    <div class="box" id="1"></div>
+                    <div class="box" id="2"></div>
+                    <div class="box" id="3"></div>
+                    <div class="box" id="4"></div>
+                    <div class="box" id="5"></div>
+                    <div class="box" id="6"></div>
+                    <div class="box" id="7"></div>
+                    <div class="box" id="8"></div>
+                </div>
+            </div>
+
+            <div class="rules">
+                <div style="border-radius: 5px; padding: 5px;">
+                    <legend class="legend-name">Rules:</legend>
+                    <hr class="line">
+                    <pre> </pre>
+                    <ul style="padding-left: 20px; font-size: 18px;">
+                        <li>Players take turns putting their marks in empty squares</li>
+                        <li>The first player to get 3 of their marksin a row (up, down, across, or diagonally) is the winner</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        
+        <div>
+            <button id="startBtn">Start</button>
+            <button id="restartBtn">Restart</button>
+        </div>
+    </div>
+
+    <script src="control.js"></script>
+</body>
+
+</html>
